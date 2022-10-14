@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_uns.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 15:47:54 by crtorres          #+#    #+#             */
-/*   Updated: 2022/10/14 11:42:31 by crtorres         ###   ########.fr       */
+/*   Created: 2022/10/13 13:06:52 by crtorres          #+#    #+#             */
+/*   Updated: 2022/10/14 11:42:29 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 /**
- * The function ft_printf() takes a string and a variable number of arguments, 
- * and returns the number of characters printed
- * @param inp The string to be printed.
+ * It prints an unsigned integer
+ * 
+ * @param n The number to be printed.
  * 
  * @return The number of characters printed.
  */
-int	ft_printf(char const *inp, ...)
+int	ft_putnbr_uns(unsigned int n)
 {
-	int		i;
-	int		count;
-	va_list	ap;
+	unsigned int	count;
 
-	i = 0;
 	count = 0;
-	va_start(ap, inp);
-	count += ft_prsprint(i, count, inp, ap);
-	va_end(ap);
+	if (n >= 0 || n <= 2147483647)
+	{
+		if (n > 9)
+		{
+			count += ft_putnbr(n / 10);
+			count += ft_putnbr(n % 10);
+		}
+		else
+			count += ft_putchar(n + '0');
+	}
 	return (count);
 }

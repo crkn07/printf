@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:38:37 by crtorres          #+#    #+#             */
-/*   Updated: 2022/10/13 16:45:25 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:42:27 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  * 
  * @return The number of characters printed.
  */
-int	ft_prsprint(int i, int count, const char *inp, va_list ap)
+int	ft_prsprint(int i, int count, const char *inp, va_list argms)
 {
 	if (!inp)
 		return (0);
@@ -31,7 +31,7 @@ int	ft_prsprint(int i, int count, const char *inp, va_list ap)
 	{
 		if (inp[i] == '%')
 		{
-			count = ft_checkparam(inp, i, count, ap);
+			count = ft_checkparam(inp, i, count, argms);
 			i++;
 		}
 		else

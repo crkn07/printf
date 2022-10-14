@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:19:36 by crtorres          #+#    #+#             */
-/*   Updated: 2022/10/13 12:04:34 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:42:30 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_putnbr(int n)
 			cont += ft_putstr("-2");
 			cont += ft_putnbr(147483648);
 		}
-		else if (n >= 10)
+		else if (n > 9)
 		{
 			cont += ft_putnbr(n / 10);
 			cont += ft_putnbr(n % 10);

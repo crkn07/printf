@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:29:38 by crtorres          #+#    #+#             */
-/*   Updated: 2022/10/13 16:59:14 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:42:33 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int		ft_putnbr(int n);
 int		ft_putstr(char *s);
 size_t	ft_strlen(const char *str);
 int		ft_checkbase(char *base);
-int		ft_checkparam(const char *input, int i, int count, va_list (ap));
+int		ft_checkparam(const char *input, int i, int count, va_list (argms));
 int		ft_hexpoint(unsigned long pnt);
-int		ft_putlngnbr_base(unsigned long nbr, char *base);
-int		ft_putunsnbr_base(unsigned int nbr, char *base);
-int		ft_prsprint(int i, int count, const char *inp, va_list ap);
-int		ft_putunsnbr(unsigned int n);
+int		ft_putnbr_base_unslng(unsigned long nbr, char *base);
+int		ft_putnbr_base_uns(unsigned int nbr, char *base);
+int		ft_prsprint(int i, int count, const char *inp, va_list argms);
+int		ft_putnbr_uns(unsigned int n);
 
 #endif
